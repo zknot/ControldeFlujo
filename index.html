@@ -13,27 +13,31 @@
     </header>
 
     <div class="tablero">
-        <!-- COLUMNA 1: EN PREPARACIÓN -->
         <div class="columna preparacion">
-            <div class="columna-titulo">En Preparación</div>
+            <div class="columna-titulo">
+                En Preparación <span id="cant-preparacion" class="contador">0</span>
+            </div>
             <div class="lista-pedidos" id="col-preparacion"></div>
         </div>
 
-        <!-- COLUMNA 2: PEDIDOS PARA REVISAR -->
         <div class="columna revisar">
-            <div class="columna-titulo">Pedidos para revisar</div>
+            <div class="columna-titulo">
+                Pedidos para revisar <span id="cant-revisar" class="contador">0</span>
+            </div>
             <div class="lista-pedidos" id="col-revisar"></div>
         </div>
 
-        <!-- COLUMNA 3: ¡LISTOS! -->
         <div class="columna listo">
-            <div class="columna-titulo">Para Facturar</div>
+            <div class="columna-titulo">
+                Para Facturar <span id="cant-listo" class="contador">0</span>
+            </div>
             <div class="lista-pedidos" id="col-listo"></div>
         </div>
 
-        <!-- COLUMNA 4: HISTORIAL RECIENTE -->
         <div class="columna despachado">
-            <div class="columna-titulo">Para Despachar</div>
+            <div class="columna-titulo">
+                Para Despachar <span id="cant-despachado" class="contador">0</span>
+            </div>
             <div class="lista-pedidos" id="col-despachado"></div>
         </div>
     </div>
