@@ -92,26 +92,26 @@ header h1 {
 
     /* --- PERSONALIZACIÓN DEL SCROLLBAR (Estándar Firefox) --- */
     scrollbar-width: thin;
-    scrollbar-color: #29292e #1a1a1e; /* Tirador (oscuro) y Fondo (mismo de la columna) */
+    scrollbar-color: #29292e #1a1a1e;
 }
 
 /* --- PERSONALIZACIÓN DEL SCROLLBAR (Motores Webkit: Chrome, Edge, Safari) --- */
 .lista-pedidos::-webkit-scrollbar {
-    width: 6px; /* Barra delgada y elegante */
+    width: 6px;
 }
 
 .lista-pedidos::-webkit-scrollbar-track {
-    background: #1a1a1e; /* Mismo color de fondo de la columna para mimetizarse */
+    background: #1a1a1e;
     border-radius: 0 0 12px 0;
 }
 
 .lista-pedidos::-webkit-scrollbar-thumb {
-    background: #29292e; /* Color sutil (igual al borde) para que no resalte */
+    background: #29292e;
     border-radius: 10px;
 }
 
 .lista-pedidos::-webkit-scrollbar-thumb:hover {
-    background: #3e3e4a; /* Se aclara levemente solo si el usuario interactúa */
+    background: #3e3e4a;
 }
 
 .pedido-card {
