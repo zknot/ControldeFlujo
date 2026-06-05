@@ -11,7 +11,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: hidden; /* Bloquea el scroll general de la pagina */
 }
 
 header {
@@ -35,7 +35,7 @@ header h1 {
     gap: 15px;
     padding: 20px;
     flex-grow: 1;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 120px); /* Ajuste de altura para evitar desbordamiento inferior */
 }
 
 .columna {
@@ -45,6 +45,7 @@ header h1 {
     flex-direction: column;
     border: 1px solid #29292e;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    min-height: 0; /* Propiedad critica: impide que la columna crezca mas alla del grid */
 }
 
 .columna-titulo {
@@ -59,6 +60,7 @@ header h1 {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    flex-shrink: 0; /* Evita que el titulo se aplaste cuando haya muchos pedidos */
 }
 
 /* Diseño general de los contadores circulares */
@@ -81,11 +83,12 @@ header h1 {
 
 .lista-pedidos {
     padding: 15px;
-    overflow-y: auto;
+    overflow-y: auto; /* Activa el scroll vertical interno */
     display: flex;
     flex-direction: column;
     gap: 15px;
     flex-grow: 1;
+    min-height: 0; /* Permite al contenedor colapsar y activar su scroll */
 }
 
 .pedido-card {
