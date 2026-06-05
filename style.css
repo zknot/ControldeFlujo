@@ -61,7 +61,7 @@ header h1 {
     gap: 10px;
 }
 
-/* Diseño de los contadores circulares */
+/* Diseño general de los contadores circulares */
 .contador {
     background-color: rgba(0, 0, 0, 0.3);
     color: #ffffff;
@@ -71,8 +71,9 @@ header h1 {
     font-weight: bold;
 }
 
+/* Ajustes específicos para la columna de Preparación */
 .preparacion .columna-titulo { background-color: #ff9800; color: #121214; }
-.preparacion .contador { color: #121214; background-color: rgba(0, 0, 0, 0.1); }
+.preparacion .contador { color: #ffffff; background-color: rgba(0, 0, 0, 0.25); }
 
 .revisar .columna-titulo { background-color: #e53935; color: #ffffff; animation: pulse-red 2s infinite; }
 .listo .columna-titulo { background-color: #4caf50; color: #ffffff; animation: pulse-green 2s infinite; }
