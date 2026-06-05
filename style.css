@@ -11,7 +11,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden; /* Bloquea el scroll general de la pagina */
+    overflow: hidden; /* Bloquea el scroll general de la página */
 }
 
 header {
@@ -45,7 +45,7 @@ header h1 {
     flex-direction: column;
     border: 1px solid #29292e;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    min-height: 0; /* Propiedad critica: impide que la columna crezca mas alla del grid */
+    min-height: 0; /* Impide que la columna crezca más allá del grid */
 }
 
 .columna-titulo {
@@ -60,7 +60,7 @@ header h1 {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    flex-shrink: 0; /* Evita que el titulo se aplaste cuando haya muchos pedidos */
+    flex-shrink: 0; /* Evita que el título se aplaste con mucha carga */
 }
 
 /* Diseño general de los contadores circulares */
@@ -88,7 +88,30 @@ header h1 {
     flex-direction: column;
     gap: 15px;
     flex-grow: 1;
-    min-height: 0; /* Permite al contenedor colapsar y activar su scroll */
+    min-height: 0;
+
+    /* --- PERSONALIZACIÓN DEL SCROLLBAR (Estándar Firefox) --- */
+    scrollbar-width: thin;
+    scrollbar-color: #29292e #1a1a1e; /* Tirador (oscuro) y Fondo (mismo de la columna) */
+}
+
+/* --- PERSONALIZACIÓN DEL SCROLLBAR (Motores Webkit: Chrome, Edge, Safari) --- */
+.lista-pedidos::-webkit-scrollbar {
+    width: 6px; /* Barra delgada y elegante */
+}
+
+.lista-pedidos::-webkit-scrollbar-track {
+    background: #1a1a1e; /* Mismo color de fondo de la columna para mimetizarse */
+    border-radius: 0 0 12px 0;
+}
+
+.lista-pedidos::-webkit-scrollbar-thumb {
+    background: #29292e; /* Color sutil (igual al borde) para que no resalte */
+    border-radius: 10px;
+}
+
+.lista-pedidos::-webkit-scrollbar-thumb:hover {
+    background: #3e3e4a; /* Se aclara levemente solo si el usuario interactúa */
 }
 
 .pedido-card {
